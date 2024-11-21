@@ -1,0 +1,204 @@
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Позволяет прокручивать при переполнении */
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+#results {
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    max-height: 300px; /* Ограничение высоты списка песен */
+    overflow-y: auto; /* Прокручиваемый список */
+}
+
+.track-item {
+    margin: 5px;
+}
+
+button.track-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.track-button:hover {
+    background: #F28202;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #979797;
+}
+
+button.play-button,
+button.stop-button {
+    background: #ffffff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+    margin-right: 5px; /* Отступ между кнопками */
+}
+
+button.play-button:hover,
+button.stop-button:hover {
+    background: #F28202;
+}
+
+.volume-control {
+    width: 80px;
+    margin-left: 10px; /* Отступ от кнопок */
+}
+
+.player-status {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+#song-input {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 16px;
+    background-color: #1E1E1E;
+    color: #ccc;
+    outline: none;
+
+}
+
+#song-input::placeholder {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    overflow: hidden; /* Убираем прокрутку */
+    position: relative; /* Для абсолютного позиционирования кругов */
+    height: 100vh; /* Высота 100% от видимой области */
+    width: 100vw; /* Ширина 100% от видимой области */
+    background: #000; /* Темный фон страницы */
+}
+
+.light-ray {
+    position: absolute;
+    width: 10vw; /* Увеличиваем размер до 20% ширины окна */
+    height: 10vw; /* Круги будут одинаковой ширины и высоты */
+    border-radius: 50%; /* Круглая форма */
+    opacity: 0; /* Начальная прозрачность */
+    animation: pulse 3s infinite; /* Устанавливаем скорость анимации */
+    z-index: -1; /* Позади других элементов */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.1; /* Начальная непрозрачность */
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5; /* Увеличиваем непрозрачность до 0.5 */
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.1; /* Возвращаемся к начальной непрозрачности */
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; /* Убираем прокрутку */
+}
+
+#background-video {
+    position: fixed; /* Зафиксировать на фоне */
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Минимальная ширина 100% */
+    min-height: 100%; /* Минимальная высота 100% */
+    width: auto; /* Ширина авто для сохранения пропорций */
+    height: auto; /* Высота авто для сохранения пропорций */
+    z-index: -1; /* Поместить за содержимым */
+    transform: translate(-50%, -50%); /* Центровка видео */
+}
+
+.content {
+    position: relative; /* Относительное позиционирование для содержимого */
+    z-index: 1; /* Спереди видео */
+    color: rgb(255, 255, 255); /* Цвет текста для лучшей читабельности */
+    text-align: center; /* Центровка текста */
+    padding: 20px; /* Отступы */
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон под текстом */
+}
